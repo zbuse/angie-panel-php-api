@@ -73,7 +73,7 @@ class AngieApi
         curl_close($ch);
         // CURL 网络错误
         if ($errno) {
-            throw new RuntimeException("Angie API CURL error: {$error}",$errno);
+            throw new \RuntimeException("Angie API CURL error: {$error}",$errno);
         }
         // 尝试解析 JSON
         $result = json_decode($response, true);
@@ -85,7 +85,7 @@ class AngieApi
         // HTTP 非 2xx 统一抛异常
         if ($status < 200 || $status >= 300) {
             $message = is_array($result) ? ($result['message']?? $result['error'] ?? json_encode($result, JSON_UNESCAPED_UNICODE) ) : (string) $result;
-            throw new RuntimeException( "Angie API {$status}: {$message}",  $status);
+            throw new \RuntimeException( "Angie API {$status}: {$message}",  $status);
         }
 
         return $result;
