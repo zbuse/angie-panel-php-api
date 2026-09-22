@@ -19,7 +19,7 @@ Angie 本身支持：
 - 更完善的动态配置能力
 
 如果主要需求是大量域名、泛域名 SSL、DNS 验证和自动证书维护，Angie 的 ACME 能力非常方便。
-作为穷屌丝上不起nginx和angie的PRO版本，用angie是很好的选择
+作为穷屌丝上不起nginx和angie的PRO版本，用angie是很好的选择，加上Angie Panel的diff和回滚功能是相当的顺手。
 
 ---
 
