@@ -265,10 +265,7 @@ class AngieApi
     /*
      * 修改 DNS 凭据
      */
-    public function updateDnsCredential(
-        int|string $id,
-        array $data
-    ): mixed {
+    public function updateDnsCredential(int|string $id,array $data): mixed {
         return $this->put("dns-credentials/{$id}", $data);
     }
 
